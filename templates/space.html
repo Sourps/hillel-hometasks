@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}
+
+Space page
+
+{% endblock %}
+
+{% block body %}
+
+<h2><i> Space data </i></h2>
+{% for item in content.values() %}
+
+    {% if item |int %}
+        <h3> The totall number of all spacemen = {{item}} ✔</h3>
+    {% elif item is not string %}
+        {% for i in item %}
+        <li> Astronaut name: {{i["name"]}} </li>
+        {% endfor %}
+    {% elif item %}
+        <p> mission: {{item}} </p>
+    {% endif %}
+
+{% endfor %}
+
+{% endblock %}
