@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}
+
+Users page
+
+{% endblock %}
+
+{% block body %}
+
+<h3><i> Users </i></h3>
+
+{% for item in content %}
+    <p> {{ item }} </p>
+{% endfor %} 
+
+{% endblock %}
